@@ -16,11 +16,11 @@
     </tr>
 
     <tr th:each="user:${userList}">
-        <td th:text="${user.userid}"></td>
-        <td th:text="${user.username}"></td>
-        <td th:text="${user.userage}"></td>
-        <td th:text="${user.usersex}"></td>
-        <td th:text="${user.useraddress}"></td>
+        <td th:text="${user.userid}">用户id</td>
+        <td th:text="${user.username}">用户名</td>
+        <td th:text="${user.userage}">用户年龄</td>
+        <td th:text="${user.usersex}">性别</td>
+        <td th:text="${user.useraddress}">地址</td>
         <td>
             <a th:href="@{/findUserById(id=${user.userid})}">修改</a>
             <a th:href="@{/delUser(id=${user.userid})}">删除</a>

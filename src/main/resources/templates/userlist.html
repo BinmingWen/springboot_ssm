@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2px" align="center">
+    <tr>
+        <th>用户id</th>
+        <th>用户名</th>
+        <th>用户姓名</th>
+        <th>用户年龄</th>
+        <th>用户地址</th>
+        <th>操作</th>
+    </tr>
+
+    <tr th:each="user:${userList}">
+        <td th:text="${user.userid}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.userage}"></td>
+        <td th:text="${user.usersex}"></td>
+        <td th:text="${user.useraddress}"></td>
+        <td>
+            <a th:href="@{/findUserById(id=${user.userid})}">修改</a>
+            <a th:href="@{/delUser(id=${user.userid})}">删除</a>
+        </td>
+
+    </tr>
+
+
+</table>
+</body>
+</html>

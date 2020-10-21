@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+</head>
+<body>
+<form th:action="@{/addUser}" method="post">
+    用户名：<input type="text" name="username"> <br>
+    用户年龄：<input type="text" name="userage"> <br>
+    用户性别：<input type="text" name="usersex"> <br>
+    用户地址：<input type="text" name="useraddress"> <br>
+    <input type="submit" value="提交">
+</form>
+
+</body>
+</html>
